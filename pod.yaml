@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: event-watcher-pod
+spec:
+  serviceAccountName: event-reader
+  containers:
+    - name: event-watcher
+      image: hodjbo/event-watcher:latest
